@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 Student Manager</h1>
+    </header>
+
+    <main>
+      <section class="form-section">
+        <h2>Add Student</h2>
+        <form id="studentForm">
+          <input type="text" id="name" placeholder="Name" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <input type="tel" id="phone" placeholder="Phone">
+          <input type="number" id="age" placeholder="Age">
+          <button type="submit">Add Student</button>
+        </form>
+      </section>
+
+      <section class="list-section">
+        <h2>Students</h2>
+        <div id="message" class="message" style="display:none;"></div>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Age</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Edit Student</h2>
+      <form id="editForm">
+        <input type="hidden" id="editId">
+        <input type="text" id="editName" required>
+        <input type="email" id="editEmail" required>
+        <input type="tel" id="editPhone">
+        <input type="number" id="editAge">
+        <button type="submit">Update</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
